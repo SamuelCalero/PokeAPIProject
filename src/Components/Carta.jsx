@@ -8,7 +8,9 @@ export default function Carta(props) {
         sprites: {front_default:''},
         base_experience:'',
         weight:'',
-        height:''
+        height:'',
+        type:{type:{name:''}},
+        type:[{name:''}]
     })
     
     const getPokemons = (url) =>{
@@ -29,9 +31,9 @@ export default function Carta(props) {
 				<div className="pkmn__exp-bar"></div>				
 			</div>
 			<div className="pkmn__info">
-					<div className="pkmn__name">{pokemon.name.toUpperCase()}<p className="size-medium">HP {pokemon.stats[0].base_stat}/{pokemon.stats[0].base_stat}</p></div>
+					<div className="pkmn__name">{pokemon.name.toUpperCase()}<p className="size-medium">HP {pokemon.stats[0].base_stat/{pokemon.stats[0].base_stat}</p></div>
 					<div className="pkmn__data">
-						<div className="pkmn__type">{pokemon.types[0].type.name}<p class="text--small">Tipo</p></div>
+						<div className="pkmn__type">{pokemon.types[0}.type.name<p class="text--small">Tipo</p></div>
 						<div className="pkmn__weight">{pokemon.weight}kg<p className="text--small">Peso</p></div>
 						<div className="pkmn__height">{pokemon.height}m<p className="text--small">Altura</p></div>
 					</div>
