@@ -24,7 +24,7 @@ export default function Carta(props) {
           <div className="pkmn__card" >
         <div className="pkmn__container" >
 			<div className="pkmn__picture" >
-				<div className="pkmn__cp">XP <span>{pokemon.base_experience}</span></div>
+				<div className="pkmn__cp">XP<span>{pokemon.base_experience}</span></div>
         <img className="pkmn__png"  src={pokemon.sprites.other["official-artwork"].front_default} alt=""/>
 				<div className="pkmn__exp-bar"></div>				
 			</div>
