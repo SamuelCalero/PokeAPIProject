@@ -6,11 +6,11 @@ import Filtros from './Filtros';
 export default function Listar() {
     
     const [pokemon,setPokemon] = useState([
-        {name: 'spearow', url: 'https://pokeapi.co/api/v2/pokemon/21/'}
+        {name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/'}
     ]);
 
     const getPokemons = ()=>{
-        axios.get('https://pokeapi.co/api/v2/pokemon/?offset=21&limit=21')
+        axios.get('https://pokeapi.co/api/v2/pokemon?limit=102&offset=0')
         .then((response)=>{
             setPokemon(response.data.results);
         });

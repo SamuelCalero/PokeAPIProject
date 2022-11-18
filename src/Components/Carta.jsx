@@ -4,17 +4,19 @@ import {useState, useEffect} from 'react'
 import './CartaPokemon.css'
 export default function Carta(props) {
     const[pokemon,setPokemon] = useState({
-        name: "",
-        sprites: {front_default:''},
-        base_experience:'',
-        weight:'',
-        height:''
+      name: "",
+      sprites:{other:{"official-artwork":{front_default:''}}},
+      base_experience:'',
+      weight:'',
+      height:'',
+      types:[{type:[]}],
+      stats:[{stats:''}]
     })
     
     const getPokemons = (url) =>{
         axios.get(url)
         .then((response)=>{
-            setPokemon(response.data)})
+            setPokemon( response.data)})
     }
     
     useEffect(()=>{
@@ -25,7 +27,7 @@ export default function Carta(props) {
         <div className="pkmn__container" >
 			<div className="pkmn__picture" >
 				<div className="pkmn__cp">XP<span>{pokemon.base_experience}</span></div>
-        <img className="pkmn__png"  src={pokemon.sprites.other["official-artwork"].front_default} alt=""/>
+        <img className="pkmn__png"  src={pokemon.sprites.other["official-artwork"].front_default}alt=""/>
 				<div className="pkmn__exp-bar"></div>				
 			</div>
 			<div className="pkmn__info">
